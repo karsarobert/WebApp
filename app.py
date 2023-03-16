@@ -28,7 +28,7 @@ def main():
         predictions = model.predict(input_variables)[0]
         print(predictions)
 
-        return flask.render_template('main.html', original_input={'Évjárat': Year, 'Futott kilóméterek': Kilometers_Driven, 'Ülések száma': Seats},
+        return flask.render_template('main.html', original_input={'Évjárat': Year, 'Futott kilométerek': Kilometers_Driven, 'Ülések száma': Seats},
                                      result=predictions)
 
 
