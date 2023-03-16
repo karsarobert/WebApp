@@ -29,7 +29,7 @@ def main():
         print(predictions)
 
         return flask.render_template('main.html', original_input={'Évjárat': Year, 'Futott kilométerek': Kilometers_Driven, 'Ülések száma': Seats},
-                                     result=predictions)
+                                     result="{:,.0f}".format(predictions*1000000))
 
 
 if __name__ == '__main__':
